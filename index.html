@@ -3,129 +3,96 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>YumiChat - Tsundere Anime AI Friend</title>
+  <title>YumiChat - AI Anime Advisor</title>
   <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: 'Segoe UI', sans-serif;
-      background: url('yumi-bg.png') no-repeat center center fixed;
-      background-size: cover;
-      overflow-x: hidden;
-    }
-
-    .overlay {
-      background-color: rgba(255, 192, 203, 0.3); /* More transparent */
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    body {
+      font-family: Arial, sans-serif;
       padding: 2rem;
-      text-align: center;
-      position: relative;
-      z-index: 1;
+      background: url('/yumi-bg.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #ffffff;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+      line-height: 1.6;
+      max-width: 800px;
+      margin: auto;
     }
-
+    h1, h2 {
+      color: #ffb3dd;
+    }
     h1 {
-      font-size: 3rem;
-      color: #b6005c;
-      margin-bottom: 0.5em;
+      font-size: 2.2rem;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+      padding-bottom: 0.5rem;
     }
-
-    p {
-      font-size: 1.2rem;
-      color: #7a0043;
-      margin-bottom: 2em;
+    section {
+      margin-bottom: 3rem;
     }
-
-    .btn-group {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .btn {
-      padding: 12px 24px;
-      font-size: 1rem;
-      border-radius: 30px;
-      border: 2px solid #b6005c;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      background-color: #b6005c;
+    a.button {
+      display: inline-block;
+      background-color: #d63384;
       color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 1rem;
     }
-
-    .btn:hover {
-      background-color: white;
-      color: #b6005c;
+    a, a:visited {
+      color: #ffd5f0;
+      text-decoration: underline;
     }
-
-    .btn-outline {
-      background-color: transparent;
-      color: #b6005c;
+    ul {
+      padding-left: 1.2rem;
     }
-
-    footer {
-      margin-top: 3em;
-      font-size: 0.9rem;
-      color: #6b0036;
-    }
-
-    .petal {
-      position: fixed;
-      top: -50px;
-      width: 30px;
-      height: 30px;
-      background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Sakura_icon.svg/1024px-Sakura_icon.svg.png') no-repeat center/contain;
-      animation: fall 10s linear infinite;
-      z-index: 0;
-      opacity: 0.6;
-    }
-
-    @keyframes fall {
-      0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 0.8;
-      }
-      100% {
-        transform: translateY(100vh) rotate(360deg);
-        opacity: 0;
-      }
-    }
-
-    @media (max-width: 600px) {
-      h1 { font-size: 2rem; }
-      p { font-size: 1rem; }
-      .btn { font-size: 0.9rem; padding: 10px 20px; }
+    img {
+      border-radius: 12px;
     }
   </style>
 </head>
 <body>
-  <!-- Sakura Petal Animation -->
-  <script>
-    for (let i = 0; i < 20; i++) {
-      const petal = document.createElement('div');
-      petal.classList.add('petal');
-      petal.style.left = Math.random() * 100 + 'vw';
-      petal.style.animationDuration = (5 + Math.random() * 5) + 's';
-      petal.style.animationDelay = Math.random() * 5 + 's';
-      document.body.appendChild(petal);
-    }
-  </script>
+  <h1>Welcome to YumiChat</h1>
+  <p>YumiChat is your all-in-one anime-style AI advisor app, offering:</p>
+  <ul>
+    <li>❤️ Romance simulation with affection levels</li>
+    <li>🧠 Mental health & motivation support</li>
+    <li>🎓 Study in Japan guidance</li>
+    <li>📊 AI-powered Office task assistant (Word, Excel, PPT)</li>
+  </ul>
 
-  <div class="overlay">
-    <h1>🌸 Welcome to YumiChat 🌸</h1>
-    <p>Your tsundere anime-style AI friend 💕<br />Available on iOS & Android</p>
-    <div class="btn-group">
-      <button class="btn" onclick="window.location.href='https://your-app-link.com'">📱 Launch YumiChat App</button>
-      <button class="btn btn-outline" disabled>💎 Subscribe to Yumi Premium (Coming Soon)</button>
-    </div>
-    <footer>
-      <p>© 2025 loveyumi.ai – Built with ❤️ and 🍵</p>
-    </footer>
-  </div>
+  <section>
+    <h2>💎 Premium Features</h2>
+    <p>YumiChat offers premium upgrades inside the app via Stripe. You can subscribe to unlock:</p>
+    <ul>
+      <li>Unlimited study or wellness sessions</li>
+      <li>Special romantic scenes</li>
+      <li>Voice lines and mini-games</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>📱 Try YumiChat (Mobile Only)</h2>
+    <p>
+      This app is currently under development using <strong>Expo</strong>. You can preview it on your phone using the <strong>Expo Go</strong> app.
+    </p>
+
+    <ol>
+      <li>Download <a href="https://expo.dev/client" target="_blank">Expo Go</a> from the App Store or Google Play</li>
+      <li>Open Expo Go and scan the QR code below</li>
+    </ol>
+
+    <img src="/qr-yumichat.png" width="180" alt="YumiChat QR Code" style="margin-top: 1rem;" />
+
+    <p style="margin-top: 1rem;">Or open the preview directly on your phone (Expo Go must be installed):</p>
+
+    <a href="exp://jhrxnm-richardzeng-8081.exp.direct" class="button">Open YumiChat in Expo Go</a>
+  </section>
+
+  <section>
+    <h2>🔗 Legal Information</h2>
+    <ul>
+      <li><a href="/terms.html" target="_blank">Terms of Service</a></li>
+      <li><a href="/tokushohyo.html" target="_blank">特定商取引法に基づく表記</a></li>
+    </ul>
+  </section>
 </body>
 </html>
