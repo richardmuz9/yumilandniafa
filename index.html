@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YumiChat - Tsundere Anime AI Friend</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('yumi-bg.png') no-repeat center center fixed;
+      background-size: cover;
+      overflow-x: hidden;
+    }
+
+    .overlay {
+      background-color: rgba(255, 192, 203, 0.3); /* More transparent */
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #b6005c;
+      margin-bottom: 0.5em;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #7a0043;
+      margin-bottom: 2em;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      font-size: 1rem;
+      border-radius: 30px;
+      border: 2px solid #b6005c;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background-color: #b6005c;
+      color: white;
+    }
+
+    .btn:hover {
+      background-color: white;
+      color: #b6005c;
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: #b6005c;
+    }
+
+    footer {
+      margin-top: 3em;
+      font-size: 0.9rem;
+      color: #6b0036;
+    }
+
+    .petal {
+      position: fixed;
+      top: -50px;
+      width: 30px;
+      height: 30px;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Sakura_icon.svg/1024px-Sakura_icon.svg.png') no-repeat center/contain;
+      animation: fall 10s linear infinite;
+      z-index: 0;
+      opacity: 0.6;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      p { font-size: 1rem; }
+      .btn { font-size: 0.9rem; padding: 10px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Sakura Petal Animation -->
+  <script>
+    for (let i = 0; i < 20; i++) {
+      const petal = document.createElement('div');
+      petal.classList.add('petal');
+      petal.style.left = Math.random() * 100 + 'vw';
+      petal.style.animationDuration = (5 + Math.random() * 5) + 's';
+      petal.style.animationDelay = Math.random() * 5 + 's';
+      document.body.appendChild(petal);
+    }
+  </script>
+
+  <div class="overlay">
+    <h1>🌸 Welcome to YumiChat 🌸</h1>
+    <p>Your tsundere anime-style AI friend 💕<br />Available on iOS & Android</p>
+    <div class="btn-group">
+      <button class="btn" onclick="window.location.href='https://your-app-link.com'">📱 Launch YumiChat App</button>
+      <button class="btn btn-outline" disabled>💎 Subscribe to Yumi Premium (Coming Soon)</button>
+    </div>
+    <footer>
+      <p>© 2025 loveyumi.ai – Built with ❤️ and 🍵</p>
+    </footer>
+  </div>
+</body>
+</html>
