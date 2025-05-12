@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>YumiSeries - Anime AI Companion</title>
+  <title>YumiLove - AI Romance & Wellness</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       padding: 2rem;
-      background: url('yumi-python.png') no-repeat center top fixed;
-      background-size: cover;
+      background: url('/yumi-python.png') no-repeat center top;
+      background-size: contain;
+      background-attachment: fixed;
       color: #ffffff;
       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+      line-height: 1.6;
       max-width: 800px;
       margin: auto;
     }
@@ -36,91 +38,79 @@
       font-weight: bold;
       margin-top: 1rem;
     }
+    a, a:visited {
+      color: #ffd5f0;
+      text-decoration: underline;
+    }
     ul {
       padding-left: 1.2rem;
     }
-    .top-buttons {
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
+    img {
+      border-radius: 12px;
     }
-    .top-buttons button {
-      background: rgba(255, 255, 255, 0.2);
-      color: #fff;
+    .lang-toggle {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      gap: 8px;
+    }
+    .lang-toggle button {
+      background-color: rgba(255,255,255,0.2);
+      color: white;
       border: none;
-      padding: 8px 12px;
-      margin-right: 0.5rem;
       border-radius: 6px;
-      cursor: pointer;
+      padding: 6px 12px;
       font-weight: bold;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-
-  <div class="top-buttons">
-    <button onclick="alert('JP translation only shown below')">🇯🇵 JP</button>
-    <button onclick="alert('ZH translation only shown below')">🇨🇳 ZH</button>
+  <div class="lang-toggle">
+    <button>JP JP</button>
+    <button>CN ZH</button>
   </div>
 
-  <h1>Welcome to YumiSeries</h1>
-  <p><strong>YumiSeries</strong> is a family of anime-style AI apps. The first release is:</p>
+  <h1>Welcome to YumiLove</h1>
+  <p>YumiLove is your all-in-one anime-style AI app, powered by Yumi's charming personality. It includes:</p>
   <ul>
-    <li>💖 <strong>YumiLove</strong> — Romance simulation & Mental health support</li>
+    <li>💗 Romance simulation with affection levels</li>
+    <li>🧘 Mental health & emotional support</li>
+    <li>📚 Study in Japan + Office automation (under Education)</li>
   </ul>
-  <p>More apps will join the YumiSeries in the future.</p>
 
   <section>
     <h2>💎 YumiPremium</h2>
-    <p><strong>YumiPremium</strong> is a shared subscription for all current and future Yumi apps. Pay once, enjoy across the series:</p>
+    <p><strong>YumiPremium</strong> is a shared subscription across all current and future Yumi series apps.</p>
     <ul>
-      <li>Unlimited romantic scenes & emotion levels</li>
-      <li>Mood tracker & mental wellness tools</li>
-      <li>Mini-games, gifts, and future Yumi app benefits</li>
+      <li>Unlimited romantic scenes & affection progress</li>
+      <li>Mood tracking & mental wellness tools</li>
+      <li>Mini-games, gifts, and bonus features</li>
     </ul>
+    <p><em>Buy once, enjoy across the whole YumiSeries.</em></p>
   </section>
 
   <section>
     <h2>📱 Try YumiLove (Mobile Only)</h2>
-    <p>Available via <strong>Expo Go</strong> preview:</p>
+    <p>This app is currently available via <strong>Expo Go</strong>. You can preview it now:</p>
     <ol>
-      <li>Download <a href="https://expo.dev/client" target="_blank">Expo Go</a></li>
-      <li>Open and scan QR code below</li>
+      <li>Download <a href="https://expo.dev/client" target="_blank">Expo Go</a> from the App Store or Google Play</li>
+      <li>Open Expo Go and scan the QR code below</li>
     </ol>
-    <img src="qr-yumichat.png" width="180" alt="YumiChat QR Code" />
-    <p style="margin-top: 1rem;">
-      Or open directly (requires Expo Go):
-    </p>
-    <a href="exp://jhrxnm-richardzeng-8081.exp.direct" class="button">Launch YumiLove</a>
+
+    <img src="/qr-yumichat.png" width="180" alt="YumiChat QR Code" style="margin-top: 1rem;" />
+
+    <p style="margin-top: 1rem;">Or open it directly (Expo Go must be installed):</p>
+    <a href="exp://jhrxnm-richardzeng-8081.exp.direct" class="button">Open YumiLove in Expo Go</a>
   </section>
 
   <section>
-    <h2>🔗 Legal Info</h2>
+    <h2>🔗 Legal</h2>
     <ul>
       <li><a href="/terms.html" target="_blank">Terms of Service</a></li>
       <li><a href="/legal.html" target="_blank">特定商取引法に基づく表記</a></li>
     </ul>
   </section>
-
-  <hr />
-
-  <section>
-    <h2>🇯🇵 日本語</h2>
-    <p><strong>Yumiシリーズ</strong> はアニメ風AIアプリのブランドです。現在の公開アプリは：</p>
-    <ul>
-      <li>💖 <strong>YumiLove</strong> — 恋愛シミュレーション & メンタルサポート</li>
-    </ul>
-    <p>将来的には、他のアプリも追加予定です。</p>
-  </section>
-
-  <section>
-    <h2>🇨🇳 中文</h2>
-    <p><strong>Yumi系列</strong> 是一个动漫风格AI应用的集合。目前上线的应用是：</p>
-    <ul>
-      <li>💖 <strong>YumiLove</strong> — 恋爱模拟 & 心理健康支持</li>
-    </ul>
-    <p>未来将持续推出更多Yumi系列应用。</p>
-  </section>
-
 </body>
 </html>
