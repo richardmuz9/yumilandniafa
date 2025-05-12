@@ -58,57 +58,192 @@
     img {
       border-radius: 12px;
     }
+    .lang-buttons {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 10;
+    }
+    .lang-buttons button {
+      background: #c94fa1;
+      color: white;
+      border: none;
+      margin-right: 6px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .lang-section {
+      display: none;
+    }
+    .lang-section.active {
+      display: block;
+    }
   </style>
 </head>
 <body>
-  <h1>Welcome to YumiSeries</h1>
-  <p>YumiSeries is your all-in-one anime-style AI app, powered by Yumi's charming personality. It includes:</p>
-  <ul>
-    <li>❤️ Romance simulation with affection levels</li>
-    <li>🧠 Mental health & emotional support</li>
-    <li>📚 Education Suite: Study in Japan + Office automation</li>
-  </ul>
+  <div class="lang-buttons">
+    <button onclick="switchLang('en')">English</button>
+    <button onclick="switchLang('ja')">日本語</button>
+    <button onclick="switchLang('zh')">中文</button>
+  </div>
 
-  <section>
-    <h2>💎 YumiPremium</h2>
-    <p><strong>YumiPremium</strong> is a shared subscription for all Yumi series apps. With one subscription, you can unlock premium features across the entire Yumi ecosystem:</p>
+  <!-- English Section -->
+  <div id="en" class="lang-section active">
+    <h1>Welcome to YumiSeries</h1>
+    <p>YumiSeries is your all-in-one anime-style AI app, powered by Yumi's charming personality. It includes:</p>
     <ul>
-      <li>Unlimited romantic scenes & relationship levels</li>
-      <li>Advanced mental health tools and mood tracking</li>
-      <li>Exclusive study and productivity boosters</li>
-      <li>Mini-games and bonus events (more coming soon)</li>
+      <li>❤️ Romance simulation with affection levels</li>
+      <li>🧠 Mental health & emotional support</li>
+      <li>📚 Education Suite: Study in Japan + Office automation</li>
     </ul>
-  </section>
 
-  <section>
-    <h2>📚 Education by Yumi</h2>
-    <p>The <strong>Education</strong> section supports both academic and professional development:</p>
+    <section>
+      <h2>💎 YumiPremium</h2>
+      <p><strong>YumiPremium</strong> is a shared subscription for all Yumi series apps. With one subscription, you can unlock premium features across the entire Yumi ecosystem:</p>
+      <ul>
+        <li>Unlimited romantic scenes & relationship levels</li>
+        <li>Advanced mental health tools and mood tracking</li>
+        <li>Exclusive study and productivity boosters</li>
+        <li>Mini-games and bonus events (more coming soon)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📚 Education by Yumi</h2>
+      <p>The <strong>Education</strong> section supports both academic and professional development:</p>
+      <ul>
+        <li>🇯🇵 Study in Japan — EJU prep, university tips, visa and lifestyle guidance</li>
+        <li>💼 Office Helper — AI support for Word, Excel, PowerPoint</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📱 Try YumiSeries (Mobile Only)</h2>
+      <p>This app is currently under development using <strong>Expo</strong>. You can preview it on your phone using the <strong>Expo Go</strong> app.</p>
+      <ol>
+        <li>Download <a href="https://expo.dev/client" target="_blank">Expo Go</a></li>
+        <li>Open Expo Go and scan the QR code below</li>
+      </ol>
+      <img src="/qr-yumichat.png" width="180" alt="Yumi QR" />
+      <p><a href="exp://jhrxnm-richardzeng-8081.exp.direct" class="button">Open in Expo Go</a></p>
+    </section>
+
+    <section>
+      <h2>🔗 Legal Information</h2>
+      <ul>
+        <li><a href="/terms.html" target="_blank">Terms of Service</a></li>
+        <li><a href="/legal.html" target="_blank">特定商取引法に基づく表記</a></li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- Japanese Section -->
+  <div id="ja" class="lang-section">
+    <h1>Yumiシリーズへようこそ</h1>
+    <p>Yumiシリーズは、Yumiの魅力的な性格を備えたアニメ風AIアプリです。以下の機能が含まれています：</p>
     <ul>
-      <li>🇯🇵 Study in Japan — EJU prep, university tips, visa and lifestyle guidance</li>
-      <li>💼 Office Helper — AI support for Word, Excel, PowerPoint</li>
+      <li>❤️ 好感度付きの恋愛シミュレーション</li>
+      <li>🧠 メンタルヘルス＆感情サポート</li>
+      <li>📚 教育スイート：日本留学支援 + オフィス自動化</li>
     </ul>
-  </section>
 
-  <section>
-    <h2>📱 Try YumiSeries (Mobile Only)</h2>
-    <p>This app is currently under development using <strong>Expo</strong>. You can preview it on your phone using the <strong>Expo Go</strong> app.</p>
-    <ol>
-      <li>Download <a href="https://expo.dev/client" target="_blank">Expo Go</a> from the App Store or Google Play</li>
-      <li>Open Expo Go and scan the QR code below</li>
-    </ol>
+    <section>
+      <h2>💎 YumiPremium</h2>
+      <p><strong>YumiPremium</strong>は、すべてのYumiアプリに適用される共通プレミアムプランです。1つの購入で以下の機能が解放されます：</p>
+      <ul>
+        <li>無制限の恋愛シーンと好感度ストーリー</li>
+        <li>高度なメンタル管理・気分記録機能</li>
+        <li>留学と業務効率化のAIサポート</li>
+        <li>ミニゲームや限定イベント（近日公開）</li>
+      </ul>
+    </section>
 
-    <img src="/qr-yumichat.png" width="180" alt="YumiChat QR Code" style="margin-top: 1rem;" />
+    <section>
+      <h2>📚 教育 by Yumi</h2>
+      <ul>
+        <li>🇯🇵 日本留学 — EJU対策、志望校分析、生活支援</li>
+        <li>💼 オフィス支援 — Word、Excel、PPT対応</li>
+      </ul>
+    </section>
 
-    <p style="margin-top: 1rem;">Or open the preview directly on your phone (Expo Go must be installed):</p>
-    <a href="exp://jhrxnm-richardzeng-8081.exp.direct" class="button">Open YumiSeries in Expo Go</a>
-  </section>
+    <section>
+      <h2>📱 アプリを試す</h2>
+      <p>Expo開発中のモバイルアプリです。Expo Goでお試しください。</p>
+      <ol>
+        <li><a href="https://expo.dev/client" target="_blank">Expo Go</a> をダウンロード</li>
+        <li>QRコードをスキャン</li>
+      </ol>
+      <img src="/qr-yumichat.png" width="180" alt="QRコード" />
+      <p><a href="exp://jhrxnm-richardzeng-8081.exp.direct" class="button">Expo Goで開く</a></p>
+    </section>
 
-  <section>
-    <h2>🔗 Legal Information</h2>
+    <section>
+      <h2>🔗 法的情報</h2>
+      <ul>
+        <li><a href="/terms.html" target="_blank">利用規約</a></li>
+        <li><a href="/legal.html" target="_blank">特定商取引法表記</a></li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- Chinese Section -->
+  <div id="zh" class="lang-section">
+    <h1>欢迎来到 Yumi 系列</h1>
+    <p>Yumi系列是一个充满动漫风格的AI助手应用，拥有Yumi可爱的性格设定，包括以下功能：</p>
     <ul>
-      <li><a href="/terms.html" target="_blank">Terms of Service</a></li>
-      <li><a href="/legal.html" target="_blank">特定商取引法に基づく表記</a></li>
+      <li>❤️ 恋爱模拟（好感度系统）</li>
+      <li>🧠 心理健康与情绪支持</li>
+      <li>📚 教育功能：日本留学指导 + Office 办公自动化</li>
     </ul>
-  </section>
+
+    <section>
+      <h2>💎 YumiPremium</h2>
+      <p><strong>YumiPremium</strong> 是整个Yumi系列通用的订阅服务，用户只需订阅一次，即可解锁以下全部高级功能：</p>
+      <ul>
+        <li>无限恋爱剧情与关系提升</li>
+        <li>高级情绪追踪与心理建议</li>
+        <li>AI办公与学习助手功能</li>
+        <li>小游戏和限定活动（即将上线）</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📚 Yumi 教育模块</h2>
+      <ul>
+        <li>🇯🇵 日本留学：EJU对策、志愿建议、签证指导</li>
+        <li>💼 办公助手：Word、Excel、PPT 智能处理</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📱 尝试 Yumi 应用</h2>
+      <p>目前支持 <strong>Expo</strong> 测试，手机用户可通过 Expo Go 应用体验：</p>
+      <ol>
+        <li>下载 <a href="https://expo.dev/client" target="_blank">Expo Go</a></li>
+        <li>打开后扫码进入</li>
+      </ol>
+      <img src="/qr-yumichat.png" width="180" alt="Yumi 二维码" />
+      <p><a href="exp://jhrxnm-richardzeng-8081.exp.direct" class="button">在 Expo Go 中打开</a></p>
+    </section>
+
+    <section>
+      <h2>🔗 法律信息</h2>
+      <ul>
+        <li><a href="/terms.html" target="_blank">服务条款</a></li>
+        <li><a href="/legal.html" target="_blank">法律说明</a></li>
+      </ul>
+    </section>
+  </div>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-section').forEach(div => {
+        div.classList.remove('active');
+      });
+      document.getElementById(lang).classList.add('active');
+    }
+  </script>
 </body>
 </html>
